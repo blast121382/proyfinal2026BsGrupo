@@ -1,7 +1,7 @@
 # Proyecto: CriptoAdvisor API · Asesor de Criptoactivos y Evaluación de Riesgo
 
 **Estudiante:** Jorge
-**Repositorio:** [https://github.com/Jorge/criptoadvisor](https://github.com/Jorge/criptoadvisor)
+**Repositorio:** [https://github.com/blast121382/proyfinal2026BsGrupo](https://github.com/blast121382/proyfinal2026BsGrupo)
 
 ---
 
