@@ -1,0 +1,6 @@
+Proyecto: CriptoAdvisor API · Asesor de Criptoactivos y Evaluación de Riesgo
+Estudiante: Jorge
+Repositorio: https://github.com/blast121382/proyfinal2026BsGrupo
+Commit de avance: 66088f5
+Evidencia principal: evidencias/sesion-02/consulta_real.json (consulta real en vivo a CoinGecko API con cotizaciones, variaciones 24h y semáforo de riesgo determinista).
+Documentación del caso: docs/PROYECTO.md
