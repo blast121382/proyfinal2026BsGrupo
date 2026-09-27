@@ -1,0 +1,47 @@
+{
+  "metadatos": {
+    "hito": "Sesión 3 · Control de entrada inválida o incompleta",
+    "fecha_utc": "2026-09-27T20:21:25Z",
+    "codigo_esperado": 422,
+    "codigo_obtenido": 422
+  },
+  "solicitud": {
+    "metodo": "POST",
+    "ruta": "/analizar",
+    "cabeceras": {
+      "Content-Type": "application/json",
+      "X-API-Key": "clave-secreta-demo-123"
+    },
+    "cuerpo": {
+      "activos": [],
+      "moneda_base": "moneda_no_permitida",
+      "perfil_riesgo": "desconocido"
+    }
+  },
+  "respuesta_obtenida": {
+    "status_code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "too_short",
+          "loc": ["body", "activos"],
+          "msg": "List should have at least 1 item after validation, not 0",
+          "input": []
+        },
+        {
+          "type": "string_pattern_mismatch",
+          "loc": ["body", "moneda_base"],
+          "msg": "String should match pattern '^(usd|eur|pen)$'",
+          "input": "moneda_no_permitida"
+        },
+        {
+          "type": "enum",
+          "loc": ["body", "perfil_riesgo"],
+          "msg": "Input should be 'conservador', 'moderado' or 'agresivo'",
+          "input": "desconocido"
+        }
+      ]
+    }
+  },
+  "conclusion": "Pydantic valida y rechaza la entrada defectuosa con mensajes estructurados sin ejecutar lógica adicional."
+}

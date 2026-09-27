@@ -1,0 +1,16 @@
+{
+  "caso_id": "caso_05_fallo_proveedor",
+  "descripcion": "Fallo controlado de proveedor externo o activo inexistente",
+  "entrada": {
+    "activos": ["moneda_totalmente_falsa_9999"],
+    "moneda_base": "usd",
+    "perfil_riesgo": "agresivo"
+  },
+  "resultado_obtenido": {
+    "status": 502,
+    "detalle_error": {
+      "detail": "Ninguno de los activos solicitados (['moneda_totalmente_falsa_9999']) fue encontrado en CoinGecko."
+    }
+  },
+  "comprobacion": "El servicio traduce la ausencia de datos o error upstream en un código HTTP 502 Bad Gateway descriptivo pero seguro, evitando fugas de información interna."
+}

@@ -1,0 +1,23 @@
+{
+  "metadatos": {
+    "hito": "Sesión 3 · Control de acceso sin autorización",
+    "fecha_utc": "2026-09-27T20:21:15Z",
+    "codigo_esperado": 401,
+    "codigo_obtenido": 401
+  },
+  "solicitud": {
+    "metodo": "POST",
+    "ruta": "/analizar",
+    "cabeceras": {
+      "Content-Type": "application/json"
+    },
+    "comentario": "Petición enviada omitiendo la cabecera X-API-Key obligatoria"
+  },
+  "respuesta_obtenida": {
+    "status_code": 401,
+    "body": {
+      "detail": "No autorizado: Clave de acceso inválida o ausente en la cabecera X-API-Key."
+    }
+  },
+  "conclusion": "El servicio rechaza la solicitud de forma determinista antes de realizar cualquier llamada externa o consumir tokens."
+}

@@ -1,0 +1,25 @@
+{
+  "caso_id": "caso_02_variante",
+  "descripcion": "Petición válida cambiando condición relevante: perfil conservador con activo de mayor volatilidad",
+  "entrada": {
+    "activos": ["solana"],
+    "moneda_base": "usd",
+    "perfil_riesgo": "conservador",
+    "horizonte_dias": 30
+  },
+  "resultado_obtenido": {
+    "status": 200,
+    "evaluacion_riesgo_general": "DESFAVORABLE_PARA_PERFIL",
+    "analisis_llm": "La inclusión de Solana para un perfil conservador no es recomendable en este momento debido a su alta volatilidad intradiaria superior al 6%.",
+    "metricas": [
+      {"activo": "solana", "precio": 148.20, "cambio_24h_pct": 6.45, "nivel_riesgo_activo": "alto"}
+    ]
+  },
+  "evaluacion_deepeval": {
+    "metrica": "GEval - Fidelidad de Datos y Coherencia de Riesgo",
+    "score": 0.92,
+    "umbral": 0.70,
+    "aprobado": true,
+    "razon_juez": "El LLM detecta y comunica con rigor la incompatibilidad entre el perfil conservador y la oscilación del activo."
+  }
+}

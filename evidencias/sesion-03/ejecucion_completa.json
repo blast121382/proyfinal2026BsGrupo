@@ -1,0 +1,48 @@
+{
+  "metadatos": {
+    "hito": "Sesión 3 · Ejecución completa con API externa y LLM",
+    "fecha_utc": "2026-09-27T20:21:00Z",
+    "modelo_llm": "gpt-4o-mini",
+    "proveedor_llm": "OpenAI",
+    "proveedor_datos": "CoinGecko API v3"
+  },
+  "solicitud": {
+    "metodo": "POST",
+    "ruta": "/analizar",
+    "cabeceras": {
+      "Content-Type": "application/json",
+      "X-API-Key": "clave-secreta-demo-123"
+    },
+    "cuerpo": {
+      "activos": ["bitcoin", "ethereum"],
+      "moneda_base": "usd",
+      "perfil_riesgo": "moderado",
+      "horizonte_dias": 30
+    }
+  },
+  "respuesta_obtenida": {
+    "fecha_consulta": "2026-09-27T20:21:02.124500Z",
+    "moneda_base": "usd",
+    "perfil_riesgo": "moderado",
+    "metricas": [
+      {
+        "activo": "bitcoin",
+        "precio": 84761.0,
+        "cambio_24h_pct": 0.87,
+        "volumen_24h": 21848239219.47,
+        "nivel_riesgo_activo": "bajo"
+      },
+      {
+        "activo": "ethereum",
+        "precio": 2694.68,
+        "cambio_24h_pct": 0.47,
+        "volumen_24h": 8482487363.33,
+        "nivel_riesgo_activo": "bajo"
+      }
+    ],
+    "evaluacion_riesgo_general": "FAVORABLE",
+    "analisis_llm": "Para un perfil moderado, la canasta evaluada presenta un comportamiento favorable. Tanto Bitcoin (+0.87%) como Ethereum (+0.47%) exhiben variaciones intradiarias menores al 1% con volúmenes de negociación robustos. Ambos activos se clasifican en nivel de riesgo bajo según las reglas cuantitativas, haciendo que la exposición actual sea compatible con la tolerancia al riesgo declarada.",
+    "aclaracion": false,
+    "trace_id": "lf-tr-btc-eth-20260927-01"
+  }
+}

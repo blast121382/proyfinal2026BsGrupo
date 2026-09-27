@@ -1,0 +1,19 @@
+{
+  "caso_id": "caso_03_faltantes",
+  "descripcion": "Petición con datos faltantes obligatorios (sin perfil_riesgo)",
+  "entrada": {
+    "activos": ["bitcoin"],
+    "moneda_base": "usd"
+  },
+  "resultado_obtenido": {
+    "status": 422,
+    "detalle_error": [
+      {
+        "type": "missing",
+        "loc": ["body", "perfil_riesgo"],
+        "msg": "Field required"
+      }
+    ]
+  },
+  "comprobacion": "Validación determinista con Pydantic. La petición fue rechazada antes de consumir red o tokens."
+}

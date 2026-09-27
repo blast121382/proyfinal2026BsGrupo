@@ -1,0 +1,25 @@
+{
+  "caso_id": "caso_04_invalidos",
+  "descripcion": "Petición con datos inválidos (activos vacíos y moneda base fuera de catálogo)",
+  "entrada": {
+    "activos": [],
+    "moneda_base": "pesetas",
+    "perfil_riesgo": "moderado"
+  },
+  "resultado_obtenido": {
+    "status": 422,
+    "detalle_error": [
+      {
+        "type": "too_short",
+        "loc": ["body", "activos"],
+        "msg": "List should have at least 1 item after validation, not 0"
+      },
+      {
+        "type": "string_pattern_mismatch",
+        "loc": ["body", "moneda_base"],
+        "msg": "String should match pattern '^(usd|eur|pen)$'"
+      }
+    ]
+  },
+  "comprobacion": "Validación de esquema y regex. Rechazo inmediato 422."
+}

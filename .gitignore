@@ -1,0 +1,19 @@
+# Entorno y dependencias
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secretos y variables de entorno
+.env
+.env.local
+*.key
+
+# Salidas temporales y logs
+salidas/
+*.log
+.pytest_cache/
+.coverage
+htmlcov/

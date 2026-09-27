@@ -1,0 +1,26 @@
+{
+  "caso_id": "caso_01_valido",
+  "descripcion": "Petición válida estándar con dos activos de alta capitalización",
+  "entrada": {
+    "activos": ["bitcoin", "ethereum"],
+    "moneda_base": "usd",
+    "perfil_riesgo": "moderado",
+    "horizonte_dias": 30
+  },
+  "resultado_obtenido": {
+    "status": 200,
+    "evaluacion_riesgo_general": "FAVORABLE",
+    "analisis_llm": "Para un perfil moderado, la canasta compuesta por Bitcoin y Ethereum muestra un comportamiento equilibrado con variaciones moderadas en 24 horas y volumen representativo.",
+    "metricas": [
+      {"activo": "bitcoin", "precio": 84761.0, "cambio_24h_pct": 0.87, "nivel_riesgo_activo": "bajo"},
+      {"activo": "ethereum", "precio": 2694.68, "cambio_24h_pct": 0.47, "nivel_riesgo_activo": "bajo"}
+    ]
+  },
+  "evaluacion_deepeval": {
+    "metrica": "GEval - Fidelidad de Datos y Coherencia de Riesgo",
+    "score": 0.95,
+    "umbral": 0.70,
+    "aprobado": true,
+    "razon_juez": "El texto cita con precisión las métricas calculadas y fundamenta correctamente la compatibilidad con el perfil moderado sin emitir especulaciones."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "metadatos": {
+    "hito": "Sesión 2 · Consulta real a la API externa",
+    "fecha_ejecucion_utc": "2026-09-27T20:20:50Z",
+    "api_nombre": "CoinGecko API v3",
+    "endpoint": "https://api.coingecko.com/api/v3/simple/price",
+    "parametros": {
+      "ids": "bitcoin,ethereum,solana",
+      "vs_currencies": "usd",
+      "include_24hr_vol": "true",
+      "include_24hr_change": "true"
+    },
+    "estado_http": 200
+  },
+  "solicitud": {
+    "metodo": "GET",
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_vol=true&include_24hr_change=true",
+    "cabeceras": {
+      "Accept": "application/json",
+      "User-Agent": "CriptoAdvisor/1.0 (Estrategias-Integracion-LLM)"
+    }
+  },
+  "respuesta_cruda": {
+    "bitcoin": {
+      "usd": 84761,
+      "usd_24h_vol": 21848239219.47413,
+      "usd_24h_change": 0.8679471404111196
+    },
+    "ethereum": {
+      "usd": 2694.68,
+      "usd_24h_vol": 8482487363.333668,
+      "usd_24h_change": 0.4672321033483141
+    },
+    "solana": {
+      "usd": 123.3,
+      "usd_24h_vol": 3841851820.4018545,
+      "usd_24h_change": 1.9309858874679589
+    }
+  },
+  "comprobacion": {
+    "origen": "CoinGecko Production Server",
+    "resultado": "Respuesta JSON válida, precios y variaciones 24h obtenidos satisfactoriamente",
+    "valido_para_hito_sesion_02": true
+  }
+}
